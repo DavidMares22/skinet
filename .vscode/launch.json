@@ -7,9 +7,16 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
+            "name": "NET",
             "url": "https://localhost:5001/swagger/index.html",
             "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Angular",
+            "url": "https://localhost:4200/#",
+            "webRoot": "${workspaceFolder}/client/"
         }
     ]
 }
