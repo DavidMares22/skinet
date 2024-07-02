@@ -5,9 +5,8 @@ import { Component, Input } from '@angular/core';
   templateUrl: './paging-header.component.html',
   styleUrls: ['./paging-header.component.scss']
 })
-export class PagingHeaderComponent 
-{
+export class PagingHeaderComponent {
   @Input() pageNumber?: number;
   @Input() pageSize?: number;
-  @Input() totalCount: number = 0;
+  @Input() totalCount?: number;
 }
