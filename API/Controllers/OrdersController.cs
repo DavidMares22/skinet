@@ -4,10 +4,12 @@ using API.Extensions;
 using AutoMapper;
 using Core.Entities.OrderAggregate;
 using Core.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class OrdersController : BaseApiController
     {
         private readonly IOrderService _orderService;
@@ -31,7 +33,7 @@ namespace API.Controllers
 
             return Ok(order);
         }
-
+        
         [HttpGet]
         public async Task<ActionResult<IReadOnlyList<OrderToReturnDto>>> GetOrdersForUser()
         {
